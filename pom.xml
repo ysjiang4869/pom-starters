@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <!-- Reference to http://maven.apache.org/guides/introduction/introduction-to-dependency-mechanism.html#Dependency_Management
+        Using uvlab-starters as bom file ,it's the pom parent's parent, and dependency management include all starter project
+        Using uvlab-starter-parent is the starter projects's parent,pom file
+        Please use uvlab-starter-parent as your project parent or dependency management import pom-->
+    <groupId>com.uvlab.foundation</groupId>
+    <artifactId>uvlab-starters</artifactId>
+    <version>1.0-SNAPSHOT</version>
+    <modules>
+        <module>uvlab-starter-parent</module>
+    </modules>
+    <packaging>pom</packaging>
+    <name>Uvlab Service Starters</name>
+    <description>Uvlab service starters,including all dependency versions,if need specific starters you can add child module</description>
+    <url>http://euvee.vicp.co</url>
+    <organization>
+        <name>Euvee, Inc.</name>
+        <url>http://euvee.vicp.co</url>
+    </organization>
+
+    <properties>
+        <uvlab-starter-web.version>1.0-SNAPSHOT</uvlab-starter-web.version>
+    </properties>
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>com.uvlab.foundation</groupId>
+                <artifactId>uvlab-starter-web</artifactId>
+                <version>${uvlab-starter-web.version}</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
+</project>

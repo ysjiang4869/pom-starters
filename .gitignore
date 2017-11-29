@@ -1,0 +1,61 @@
+
+
+#---------------
+# project
+
+*.jar
+*.bak
+*.log
+
+*.sw?
+.#*
+*#
+*~
+dependency-reduced-pom.xml
+*.sublime-*
+.gradle
+.idea
+.idea/workspace.xml
+README.html
+.classpath
+.project
+.settings
+.classpath
+./lib/
+./src/main/webapp/WEB-INF/lib
+# windows
+**/.db
+**/workspace.xml
+bin
+build
+log
+target
+target/
+db/
+out/
+/scratch
+temp/
+tmp/
+obsolate/
+site-mvc/
+modules/
+
+
+
+
+#---------------
+# mac os x
+
+**/.DS_Store
+
+# Thumbnails
+**/._*
+
+# Files that might appear on external disk
+**/.Spotlight-V100
+**/.Trashes
+/site-springboot/Data
+/site-springboot/src/main/webapp/wiki
+/*.iml
+
+*.iml
