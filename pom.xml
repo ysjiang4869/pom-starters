@@ -7,31 +7,41 @@
         Using uvlab-starters as bom file ,it's the pom parent's parent, and dependency management include all starter project
         Using uvlab-starter-parent is the starter projects's parent,pom file
         Please use uvlab-starter-parent as your project parent or dependency management import pom-->
-    <groupId>com.uvlab.foundation</groupId>
-    <artifactId>uvlab-starters</artifactId>
+    <groupId>org.jys.foundation</groupId>
+    <artifactId>pom-starters</artifactId>
     <version>1.0-SNAPSHOT</version>
     <modules>
-        <module>uvlab-starter-parent</module>
+        <module>pom-starter-parent</module>
     </modules>
     <packaging>pom</packaging>
-    <name>Uvlab Service Starters</name>
-    <description>Uvlab service starters,including all dependency versions,if need specific starters you can add child module</description>
-    <url>http://euvee.vicp.co</url>
+    <name>Jiang YueSong Personal Service Starters</name>
+    <description>service starters,including all dependency versions,if need specific starters you can add child module</description>
+    <url>http://jiangyuesong.me</url>
     <organization>
-        <name>Euvee, Inc.</name>
-        <url>http://euvee.vicp.co</url>
+        <name>Jiang YueSong</name>
+        <url>http://jiangyuesong.me</url>
     </organization>
 
+    <developers>
+        <developer>
+            <name>Jiang YueSong</name>
+            <email>ysjiang92@gmail.com</email>
+            <roles>
+                <role>Project Owner</role>
+            </roles>
+        </developer>
+    </developers>
+
     <properties>
-        <uvlab-starter-web.version>1.0-SNAPSHOT</uvlab-starter-web.version>
+        <pom-starter-web.version>1.0-SNAPSHOT</pom-starter-web.version>
     </properties>
 
     <dependencyManagement>
         <dependencies>
             <dependency>
-                <groupId>com.uvlab.foundation</groupId>
-                <artifactId>uvlab-starter-web</artifactId>
-                <version>${uvlab-starter-web.version}</version>
+                <groupId>org.jys.foundation</groupId>
+                <artifactId>pom-starter-web</artifactId>
+                <version>${pom-starter-web.version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>

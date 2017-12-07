@@ -3,17 +3,17 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <parent>
-        <artifactId>uvlab-starters</artifactId>
-        <groupId>com.uvlab.foundation</groupId>
+        <artifactId>pom-starters</artifactId>
+        <groupId>org.jys.foundation</groupId>
         <version>1.0-SNAPSHOT</version>
     </parent>
 
     <modules>
-        <module>../uvlab-starter-web</module>
+        <module>../pom-starter-web</module>
     </modules>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>uvlab-starter-parent</artifactId>
+    <artifactId>pom-starter-parent</artifactId>
     <packaging>pom</packaging>
 
     <properties>
