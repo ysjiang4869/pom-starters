@@ -244,5 +244,103 @@
         </dependencies>
     </dependencyManagement>
 
+    <build>
+        <pluginManagement>
+            <plugins>
+                <plugin>
+                    <!--Refer to spring boot document, using for packing executable jar file, cmd:mvn package-->
+                    <groupId>org.springframework.boot</groupId>
+                    <artifactId>spring-boot-maven-plugin</artifactId>
+                    <version>${spring-boot.version}</version>
+                    <executions>
+                        <execution>
+                            <goals>
+                                <goal>repackage</goal>
+                            </goals>
+                        </execution>
+                    </executions>
+                    <dependencies>
+                        <!-- spring热部署-->
+                        <dependency>
+                            <groupId>org.springframework</groupId>
+                            <artifactId>springloaded</artifactId>
+                            <version>${springloaded.version}</version>
+                        </dependency>
+                    </dependencies>
+                </plugin>
+                <plugin>
+                    <!--using for configure -->
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-compiler-plugin</artifactId>
+                    <version>${maven-complier-plugin.version}</version>
+                    <configuration>
+                        <source>1.8</source>
+                        <target>1.8</target>
+                    </configuration>
+                </plugin>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-dependency-plugin</artifactId>
+                    <version>${maven-dependency-plugin.version}</version>
+                </plugin>
+                <!-- jooq codegen example-->
+                <plugin>
+                    <!-- Specify the maven code generator plugin -->
+                    <!-- Use org.jooq for the Open Source Edition
+                    org.jooq.pro for commercial editions,
+                    org.jooq.pro-java-6 for commercial editions with Java 6 support,
+                    org.jooq.trial for the free trial edition
+                    Note: Only the Open Source Edition is hosted on Maven Central.
+                    Import the others manually from your distribution -->
+                    <groupId>org.jooq</groupId>
+                    <artifactId>jooq-codegen-maven</artifactId>
+                    <version>${jooq.version}</version>
+                    <!-- The plugin should hook into the generate goal -->
+                    <executions>
+                        <execution>
+                            <goals>
+                                <goal>generate</goal>
+                            </goals>
+                        </execution>
+                    </executions>
+                    <!-- Manage the plugin's dependency. In this example, we'll use a PostgreSQL database -->
+                    <dependencies>
+                        <dependency>
+                            <groupId>postgresql</groupId>
+                            <artifactId>postgresql</artifactId>
+                            <version>${postgres.version}</version>
+                        </dependency>
+                    </dependencies>
+                    <!-- Specify the plugin configuration.
+                    The configuration format is the same as for the standalone code generator -->
+                    <configuration>
+                        <!-- JDBC connection parameters -->
+                        <jdbc>
+                            <driver>org.postgresql.Driver</driver>
+                            <!--<url>jdbc:postgresql://localhost:5432/node?useUnicode=true&amp;characterEncoding=UTF-8</url>-->
+                            <user>postgres</user>
+                            <password>root</password>
+                        </jdbc>
+                        <!-- Generator parameters -->
+                        <generator>
+                            <database>
+                                <name>org.jooq.util.postgres.PostgresDatabase</name>
+                                <includes>.*</includes>
+                                <!-- <excludes></excludes>-->
+                                <!-- In case your database supports catalogs, e.g. SQL Server:
+                                <inputCatalog>public</inputCatalog>
+                                -->
+                                <inputSchema>public</inputSchema>
+                            </database>
+                            <target>
+                                <!--<packageName>org.opencenter.service.node.init</packageName>-->
+                                <directory>target/generated-sources/jooq</directory>
+                            </target>
+                        </generator>
+                    </configuration>
+                </plugin>
+            </plugins>
+        </pluginManagement>
+    </build>
 
 </project>
