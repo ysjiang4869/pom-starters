@@ -31,7 +31,8 @@
         <groovy.version>2.4.7</groovy.version>
         <gson.version>2.7</gson.version>
         <hazelcast.version>3.7</hazelcast.version>
-        <hibernate.version>5.2.6.Final</hibernate.version>
+        <hibernate-core.version>5.2.6.Final</hibernate-core.version>
+        <hibernate-validator.version>5.3.6.Final</hibernate-validator.version>
         <jackson.version>2.8.10</jackson.version>
         <javax.mail.version>1.5.5</javax.mail.version>
         <jooq.version>3.9.1</jooq.version>
@@ -47,7 +48,7 @@
         <retrofit.version>2.2.0</retrofit.version>
         <springfox.version>2.7.0</springfox.version>
         <springloaded.version>1.2.6.RELEASE</springloaded.version>
-        <spring-boot.version>1.5.8.RELEASE</spring-boot.version>
+        <spring-boot.version>1.5.9.RELEASE</spring-boot.version>
         <spring-kafka.version>1.2.2.RELEASE</spring-kafka.version>
         <spring-security.version>4.2.3.RELEASE</spring-security.version>
         <sqlite-jdbc.version>3.16.1</sqlite-jdbc.version>
@@ -58,13 +59,13 @@
 
     <dependencyManagement>
         <dependencies>
-            <dependency>
+            <!--<dependency>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-dependencies</artifactId>
                 <version>${spring-boot.version}</version>
                 <type>pom</type>
                 <scope>import</scope>
-            </dependency>
+            </dependency>-->
             <dependency>
                 <groupId>commons-io</groupId>
                 <artifactId>commons-io</artifactId>
@@ -214,7 +215,13 @@
             <dependency>
                 <groupId>org.hibernate</groupId>
                 <artifactId>hibernate-core</artifactId>
-                <version>${hibernate.version}</version>
+                <version>${hibernate-core.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.hibernate</groupId>
+                <artifactId>hibernate-validator</artifactId>
+                <version>${hibernate-validator.version}</version>
             </dependency>
 
             <dependency>

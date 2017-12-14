@@ -36,6 +36,12 @@
         <pom-starter-web.version>1.0-SNAPSHOT</pom-starter-web.version>
     </properties>
 
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>1.5.9.RELEASE</version>
+    </parent>
+
     <dependencyManagement>
         <dependencies>
             <dependency>
