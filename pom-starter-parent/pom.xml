@@ -25,6 +25,7 @@
         <commons-fileupload.version>1.2</commons-fileupload.version>
         <commons-io.version>2.5</commons-io.version>
         <commons-lang3.version>3.5</commons-lang3.version>
+        <common-tools.version>1.0-SNAPSHOT</common-tools.version>
         <ehcache.version>2.6.11</ehcache.version>
         <graphql.version>2.3.0</graphql.version>
         <groovy.version>2.4.7</groovy.version>
@@ -51,7 +52,6 @@
         <spring-security.version>4.2.3.RELEASE</spring-security.version>
         <sqlite-jdbc.version>3.16.1</sqlite-jdbc.version>
         <thumbnailator.version>[0.4, 0.5)</thumbnailator.version>
-        <uvlab-common.version>1.0-SNAPSHOT</uvlab-common.version>
         <vertx.version>3.4.1</vertx.version>
         <weixin-java-mp.version>2.4.0</weixin-java-mp.version>
     </properties>
@@ -236,9 +236,9 @@
             </dependency>
 
             <dependency>
-                <groupId>com.uvlab.common</groupId>
+                <groupId>org.jys.foundation</groupId>
                 <artifactId>common-tools</artifactId>
-                <version>${uvlab-common.version}</version>
+                <version>${common-tools.version}</version>
             </dependency>
 
         </dependencies>
