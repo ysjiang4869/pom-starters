@@ -37,7 +37,7 @@
         <javax.mail.version>1.5.5</javax.mail.version>
         <jooq.version>3.9.1</jooq.version>
         <jsonwebtoken.version>0.6.0</jsonwebtoken.version>
-        <jsoup.version>1.10.2</jsoup.version>
+        <jsoup.version>1.15.3</jsoup.version>
         <kaptcha.version>0.0.9</kaptcha.version>
         <maven-complier-plugin.version>3.7.0</maven-complier-plugin.version>
         <maven-dependency-plugin.version>2.1.0</maven-dependency-plugin.version>
