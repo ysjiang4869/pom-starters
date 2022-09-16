@@ -27,7 +27,7 @@
         <commons-lang3.version>3.5</commons-lang3.version>
         <common-tools.version>1.0-SNAPSHOT</common-tools.version>
         <ehcache.version>2.6.11</ehcache.version>
-        <graphql.version>2.3.0</graphql.version>
+        <graphql.version>17.4</graphql.version>
         <groovy.version>2.4.7</groovy.version>
         <gson.version>2.7</gson.version>
         <hazelcast.version>3.7</hazelcast.version>
